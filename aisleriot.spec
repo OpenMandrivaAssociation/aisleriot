@@ -3,10 +3,9 @@
 
 Name:		aisleriot
 Version:	3.4.1
-Release:	%mkrel 1
+Release:	1
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		aisleriot-3.3.2-help_linguas.patch
 Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Other
@@ -39,7 +38,6 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %prep
 %setup -q
-%apply_patches
 autoreconf -fi
 
 %build
