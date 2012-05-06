@@ -26,7 +26,6 @@ BuildRequires:	yelp-tools
 BuildRequires:	itstool
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-dtd41-sgml
-BuildRequires:	rpm-mageia-setup-build >= 1.144
 BuildRequires:	guile
 # For autoreconf, due to Patch0
 BuildRequires:	gettext-devel
