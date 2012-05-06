@@ -26,7 +26,8 @@ BuildRequires:	yelp-tools
 BuildRequires:	itstool
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-dtd41-sgml
-BuildRequires:	guile
+#BuildRequires:	guile
+
 # For autoreconf, due to Patch0
 BuildRequires:	gettext-devel
 
