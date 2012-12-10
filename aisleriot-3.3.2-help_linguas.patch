@@ -1,0 +1,11 @@
+--- aisleriot-3.3.2/help/Makefile.am~	2012-01-13 19:32:51.000000000 +0000
++++ aisleriot-3.3.2/help/Makefile.am	2012-03-21 23:41:38.000000000 +0000
+@@ -2,7 +2,7 @@
+ 
+ NULL =
+ 
+-HELP_LINGUAS = ca de el en_GB es eu fr gl oc ru sl sr sr@latin sv zh_CN
++HELP_LINGUAS = de en_GB fr
+ 
+ HELP_ID = aisleriot
+ 

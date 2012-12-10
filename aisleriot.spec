@@ -1,14 +1,17 @@
+#FIXME: disabled temporarily to get package build (wally 07/2011)
 %define	Werror_cflags	%nil
+
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
 Name:		aisleriot
-Version:	3.4.1
+Version:	3.6.2
 Release:	1
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		aisleriot-3.3.2-help_linguas.patch
 Summary:	A compilation of solitaire card games
 License:	GPLv3+
-Group:		Games/Other
+Group:		Games/Cards
 Conflicts:	gnome-games < 2.29.6-2
 BuildRequires:	pkgconfig(cairo) >= 1.10.0
 BuildRequires:	pkgconfig(gconf-2.0) >= 2.0
@@ -25,9 +28,8 @@ BuildRequires:	intltool
 BuildRequires:	yelp-tools
 BuildRequires:	itstool
 BuildRequires:	gnome-doc-utils
-BuildRequires:	docbook-dtd41-sgml
-#BuildRequires:	guile
-
+#BuildRequires:	docbook-dtds
+BuildRequires:	guile
 # For autoreconf, due to Patch0
 BuildRequires:	gettext-devel
 
@@ -38,9 +40,10 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %prep
 %setup -q
-autoreconf -fi
+%apply_patches
 
 %build
+autoreconf -vfi
 %configure2_5x \
 	--disable-schemas-compile \
 	--disable-schemas-install \
@@ -50,7 +53,8 @@ autoreconf -fi
 %install
 %makeinstall_std
 
-%find_lang %{name} --with-help
+%find_lang %{name} --with-gnome
+#--with-help
 
 %preun
 %preun_uninstall_gconf_schemas %{name}
@@ -61,10 +65,8 @@ autoreconf -fi
 %{_libdir}/%{name}/
 %{_libdir}/valgrind/aisleriot.supp
 %{_datadir}/applications/sol.desktop
-%{_datadir}/applications/freecell.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.Patience.WindowState.gschema.xml
-%{_iconsdir}/*/*/*/gnome-aisleriot.*
-%{_iconsdir}/*/*/*/gnome-freecell.*
+%{_iconsdir}/hicolor/*/apps/gnome-aisleriot.*
+%{_iconsdir}/hicolor/*/apps/gnome-freecell.*
 %{_mandir}/man6/sol.*
-%{_datadir}/%{name}
-
+%{_datadir}/%{name}/
