@@ -5,7 +5,7 @@
 
 Name:		aisleriot
 Version:	3.6.2
-Release:	1
+Release:	2
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:		aisleriot-3.3.2-help_linguas.patch
