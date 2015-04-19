@@ -27,7 +27,6 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %setup -q
 
 %build
-
 %configure 	\
 	--with-card-theme-formats=all \
 	--with-kde-card-theme-path=%{_datadir}/apps/carddecks \
