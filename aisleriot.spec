@@ -49,8 +49,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %preun_uninstall_gconf_schemas %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS
-%license COPYING.GPL3 COPYING.LGPL3 COPYING.GFDL
+%doc AUTHORS COPYING.* ChangeLog NEWS TODO
 %{_bindir}/*
 %{_libdir}/aisleriot
 %{_libdir}/valgrind
