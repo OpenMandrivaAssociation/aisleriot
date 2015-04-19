@@ -16,7 +16,7 @@ BuildRequires: intltool
 BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
-
+BuildRequires: pkgconfig(Qt5Svg)
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
@@ -39,7 +39,6 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %make V=1
 
 %install
-export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 %makeinstall_std
 
 desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
