@@ -28,8 +28,15 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %build
 
-%configure -with_kde_card_theme_path="/usr/share/kde4/apps/carddecks"
-%make
+%configure 	\
+	--with-card-theme-formats=all \
+	--with-kde-card-theme-path=%{_datadir}/apps/carddecks \
+	--with-pysol-card-theme-path=%{_datadir}/PySolFC \
+	--disable-schemas-compile \
+	--disable-schemas-install \
+	--disable-static
+    
+%make V=1
 
 %install
 export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
