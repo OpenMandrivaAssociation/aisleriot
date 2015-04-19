@@ -53,6 +53,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %license COPYING.GPL3 COPYING.LGPL3 COPYING.GFDL
 %{_bindir}/*
 %{_libdir}/aisleriot
+%{_libdir}/valgrind
 %{_libexecdir}/aisleriot/
 %{_datadir}/aisleriot
 %{_datadir}/appdata/sol.appdata.xml
