@@ -45,7 +45,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %find_lang %{name} --with-gnome
 
 
-
+%preun
 %preun_uninstall_gconf_schemas %{name}
 
 %files -f %{name}.lang
