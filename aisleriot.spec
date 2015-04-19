@@ -28,17 +28,19 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %build
 
-%configure
+%configure -with_kde_card_theme_path="/usr/share/kde4/apps/carddecks"
 %make
 
 %install
 export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 %makeinstall_std
-desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
-%find_lang %{name} --with-gnome
-#--with-help
 
-%preun
+desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
+
+%find_lang %{name} --with-gnome
+
+
+
 %preun_uninstall_gconf_schemas %{name}
 
 %files -f %{name}.lang
