@@ -16,7 +16,7 @@ BuildRequires: intltool
 BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
-BuildRequires: pkgconfig(Qt5Svg)
+BuildRequires: qt4-devel
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
