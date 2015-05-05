@@ -1,0 +1,11 @@
+--- aisleriot-3.16.1/src/lib/ar-card-theme-qsvg.cpp.orig	2015-05-05 10:17:03.312756939 +0100
++++ aisleriot-3.16.1/src/lib/ar-card-theme-qsvg.cpp	2015-05-05 10:17:07.935344446 +0100
+@@ -185,7 +185,7 @@
+   size->height = theme->card_size.height();
+ }
+ 
+-static qreal
++static double
+ ar_card_theme_qsvg_get_card_aspect (ArCardTheme* card_theme)
+ {
+   ArCardThemeQSvg *theme = (ArCardThemeQSvg *) card_theme;
