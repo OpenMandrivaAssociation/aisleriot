@@ -3,9 +3,10 @@ Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
 Version:	3.16.1
-Release:	2
+Release:	3
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Patch1:		aisleriot-3.16.1-double.patch
 
 BuildRequires: pkgconfig(gconf-2.0)
 BuildRequires: pkgconfig(gtk+-3.0)
@@ -25,6 +26,7 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %configure 	\
