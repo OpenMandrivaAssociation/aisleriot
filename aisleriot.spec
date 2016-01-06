@@ -2,7 +2,7 @@ Name:		aisleriot
 Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
-Version:	3.16.1
+Version:	3.18.2
 Release:	4
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
@@ -36,7 +36,7 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 	--disable-schemas-compile \
 	--disable-schemas-install \
 	--disable-static
-    
+
 %make V=1
 
 %install
