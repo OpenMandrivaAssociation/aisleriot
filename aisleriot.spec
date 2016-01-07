@@ -60,7 +60,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %{_datadir}/appdata/sol.appdata.xml
 %{_datadir}/applications/sol.desktop
 %{_datadir}/icons/hicolor/*/apps/*.png
-%{_datadir}/icons/HighContrast/*/apps/*.svg
+%{_datadir}/icons/hicolor/*/apps/*.svg
 %{_sysconfdir}/gconf/schemas/aisleriot.schemas
 %{_datadir}/glib-2.0/schemas/org.gnome.Patience.WindowState.gschema.xml
 %{_mandir}/man6/sol.6*
