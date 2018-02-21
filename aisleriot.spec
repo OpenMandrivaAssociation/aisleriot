@@ -17,6 +17,7 @@ BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Svg)
 BuildRequires: qt5-devel
 
 %description
