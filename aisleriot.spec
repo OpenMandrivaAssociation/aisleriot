@@ -2,11 +2,10 @@ Name:		aisleriot
 Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
-Version:	3.18.2
-Release:	4
+Version:	3.22.4
+Release:	1
 Url:		http://live.gnome.org/Aisleriot
-Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch1:		aisleriot-3.16.1-double.patch
+Source0:	http://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
 
 BuildRequires: pkgconfig(gconf-2.0)
 BuildRequires: pkgconfig(gtk+-3.0)
@@ -17,7 +16,8 @@ BuildRequires: intltool
 BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
-BuildRequires: qt4-devel
+BuildRequires:	cmake(ECM)
+BuildRequires: qt5-devel
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
@@ -29,10 +29,13 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %apply_patches
 
 %build
+export CXX="%__cxx -std=c++11"
+
 %configure 	\
 	--with-card-theme-formats=all \
 	--with-kde-card-theme-path=%{_datadir}/apps/carddecks \
 	--with-pysol-card-theme-path=%{_datadir}/PySolFC \
+	--with-platform=gtk-only \
 	--disable-schemas-compile \
 	--disable-schemas-install \
 	--disable-static
@@ -57,10 +60,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %{_libdir}/valgrind
 %{_libexecdir}/aisleriot/
 %{_datadir}/aisleriot
-%{_datadir}/appdata/sol.appdata.xml
+%{_datadir}/metainfo/sol.appdata.xml
 %{_datadir}/applications/sol.desktop
 %{_datadir}/icons/hicolor/*/apps/*.png
 %{_datadir}/icons/hicolor/*/apps/*.svg
-%{_sysconfdir}/gconf/schemas/aisleriot.schemas
 %{_datadir}/glib-2.0/schemas/org.gnome.Patience.WindowState.gschema.xml
 %{_mandir}/man6/sol.6*
