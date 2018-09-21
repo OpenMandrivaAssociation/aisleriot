@@ -7,7 +7,6 @@ Release:	1
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 
-BuildRequires: pkgconfig(gconf-2.0)
 BuildRequires: pkgconfig(gtk+-3.0)
 BuildRequires: pkgconfig(guile-2.2)
 BuildRequires: pkgconfig(librsvg-2.0)
