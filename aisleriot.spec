@@ -3,7 +3,7 @@ Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
 Version:	3.22.9
-Release:	1
+Release:	2
 Url:		http://live.gnome.org/Aisleriot
 Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 
