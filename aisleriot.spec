@@ -26,7 +26,7 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 export CXX="%__cxx -std=c++11"
