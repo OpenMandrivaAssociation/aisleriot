@@ -12,6 +12,7 @@ BuildRequires: pkgconfig(gtk+-3.0)
 BuildRequires: pkgconfig(guile-2.2)
 BuildRequires: pkgconfig(librsvg-2.0)
 BuildRequires: pkgconfig(libcanberra-gtk3)
+BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
 BuildRequires: yelp-tools
@@ -34,6 +35,8 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 #export CXX="%__cxx -std=c++11"
 
 %meson \
+       -D theme_pysol=true \
+       -D theme_pysol_path=%{_datadir}/PySolFC \ \
        -D theme_kde_path=%{_datadir}/apps/carddecks
        
 %meson_build
