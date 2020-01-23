@@ -33,7 +33,9 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %build
 #export CXX="%__cxx -std=c++11"
 
-%meson
+%meson \
+       -D theme_pysol_path=%{_datadir}/apps/carddecks \
+       
 %meson_build
 
 %install
