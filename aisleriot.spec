@@ -36,7 +36,7 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %meson \
        -D theme_pysol=true \
-       -D theme_pysol_path=%{_datadir}/PySolFC \ \
+       -D theme_pysol_path=%{_datadir}/PySolFC \
        -D theme_kde_path=%{_datadir}/apps/carddecks
        
 %meson_build
