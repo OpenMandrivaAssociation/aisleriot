@@ -19,6 +19,7 @@ BuildRequires: desktop-file-utils
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires: qt5-devel
+BuildRequires: meson
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
