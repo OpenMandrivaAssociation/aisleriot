@@ -7,6 +7,7 @@ Release:	1
 Url:		http://live.gnome.org/Aisleriot
 #Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source0:	https://gitlab.gnome.org/GNOME/aisleriot/-/archive/%{version}/%{name}-%{version}.tar.bz2
+Patch0:       aisleriot-3.22.13-fix-meson-svg-install-openmandriva.patch
 
 BuildRequires: pkgconfig(gtk+-3.0)
 BuildRequires: pkgconfig(guile-2.2)
