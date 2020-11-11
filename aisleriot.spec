@@ -54,13 +54,13 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %preun_uninstall_gconf_schemas %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING.* ChangeLog NEWS TODO
+%doc AUTHORS COPYING.* TODO
 %{_bindir}/*
 %{_libdir}/aisleriot
 %{_libdir}/valgrind
 %{_libexecdir}/aisleriot/
 %{_datadir}/aisleriot
-%{_datadir}/metainfo/sol.appdata.xml
+#{_datadir}/metainfo/sol.appdata.xml
 %{_datadir}/applications/sol.desktop
 %{_datadir}/icons/hicolor/*/apps/*.png
 %{_datadir}/icons/hicolor/*/apps/*.svg
