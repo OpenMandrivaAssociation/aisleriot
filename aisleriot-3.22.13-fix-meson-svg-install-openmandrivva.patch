@@ -1,0 +1,9 @@
+diff -uraN aisleriot-3.22.13/cards/meson_svgz.sh omv-aisleriot-3.22.13/cards/meson_svgz.sh
+--- aisleriot-3.22.13/cards/meson_svgz.sh	2020-09-28 10:25:11.000000000 +0200
++++ omv-aisleriot-3.22.13/cards/meson_svgz.sh	2020-11-11 20:30:52.818283751 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/bash
++#!/usr/bin/env bash
+ # Copyright © 2019 Christian Persch
+ #
+ # This programme is free software; you can redistribute it and/or modify it
