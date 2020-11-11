@@ -60,7 +60,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/sol.desktop
 %{_libdir}/valgrind
 %{_libexecdir}/aisleriot/
 %{_datadir}/aisleriot
-#{_datadir}/metainfo/sol.appdata.xml
+%{_datadir}/metainfo/sol.metainfo.xml
 %{_datadir}/applications/sol.desktop
 %{_datadir}/icons/hicolor/*/apps/*.png
 %{_datadir}/icons/hicolor/*/apps/*.svg
