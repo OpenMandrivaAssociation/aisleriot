@@ -25,6 +25,7 @@ BuildRequires: cmake(Qt5Svg)
 BuildRequires: qt5-devel
 BuildRequires: meson
 
+Recommends:   pysol
 Recommends:   PySolFC
 Recommends:   PySolFC-cardsets
 Recommends:   pysol-cardsets
