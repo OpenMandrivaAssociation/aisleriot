@@ -29,6 +29,7 @@ Recommends:   pysol
 Recommends:   PySolFC
 Recommends:   PySolFC-cardsets
 Recommends:   pysol-cardsets
+Recommends:   libkdegames-common
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
