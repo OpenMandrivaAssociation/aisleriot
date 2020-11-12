@@ -7,6 +7,8 @@ Release:	1
 Url:		http://live.gnome.org/Aisleriot
 #Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source0:	https://gitlab.gnome.org/GNOME/aisleriot/-/archive/%{version}/%{name}-%{version}.tar.bz2
+# Small fix for build issues in Meson 
+# https://gitlab.gnome.org/GNOME/aisleriot/-/issues/46
 Patch0:       aisleriot-3.22.13-fix-meson-svg-install-openmandriva.patch
 
 BuildRequires: pkgconfig(gtk+-3.0)
@@ -18,10 +20,14 @@ BuildRequires: intltool
 BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
-BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(Qt5Svg)
+BuildRequires: cmake(ECM)
+BuildRequires: cmake(Qt5Svg)
 BuildRequires: qt5-devel
 BuildRequires: meson
+
+Recommends:   PySolFC
+Recommends:   PySolFC-cardsets
+Recommends:   pysol-cardsets
 
 %description
 Aisleriot (also known as Solitaire or sol) is a collection of card games
@@ -33,7 +39,6 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %autopatch -p1
 
 %build
-#export CXX="%__cxx -std=c++11"
 
 %meson \
        -D theme_pysol=true \
