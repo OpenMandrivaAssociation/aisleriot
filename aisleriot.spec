@@ -2,7 +2,7 @@ Name:		aisleriot
 Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
-Version:	3.22.22
+Version:	3.22.23
 Release:	1
 Url:		http://live.gnome.org/Aisleriot
 #Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
@@ -22,6 +22,7 @@ BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Svg)
 BuildRequires: qt5-devel
 BuildRequires: meson
+BuildRequires: glibc-static-devel
 
 Recommends:   pysol
 Recommends:   PySolFC
