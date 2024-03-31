@@ -3,7 +3,7 @@ Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
 Version:	3.22.31
-Release:	1
+Release:	2
 Url:		https://live.gnome.org/Aisleriot
 #Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source0:	https://gitlab.gnome.org/GNOME/aisleriot/-/archive/%{version}/%{name}-%{version}.tar.bz2
@@ -25,8 +25,8 @@ BuildRequires: meson
 BuildRequires: glibc-static-devel
 
 Recommends:   pysol
-Recommends:   PySolFC
-Recommends:   PySolFC-cardsets
+#Recommends:   PySolFC
+#Recommends:   PySolFC-cardsets
 Recommends:   pysol-cardsets
 Recommends:   libkdegames-common
 
