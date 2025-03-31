@@ -44,7 +44,7 @@ have been coded for your pleasure in the GNOME scripting language (Scheme).
 %meson \
        -D theme_pysol=true \
        -D theme_pysol_path=%{_datadir}/PySolFC \
-       -D theme_svg_qtsvg=true \
+       -D theme_svg_qtsvg=false \
        -D theme_kde=false \
        -D theme_svg_rsvg=true
        
