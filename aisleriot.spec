@@ -3,7 +3,7 @@ Summary:	A compilation of solitaire card games
 License:	GPLv3+
 Group:		Games/Cards
 Version:	3.22.35
-Release:	3
+Release:	4
 Url:		https://live.gnome.org/Aisleriot
 #Source0:	http://download.gnome.org/sources/aisleriot/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source0:	https://gitlab.gnome.org/GNOME/aisleriot/-/archive/%{version}/%{name}-%{version}.tar.bz2
@@ -19,9 +19,9 @@ BuildRequires: itstool
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Qt5Svg)
-BuildRequires: cmake(Qt5Gui)
-BuildRequires: cmake(Qt5Core)
+#BuildRequires: cmake(Qt5Svg)
+#BuildRequires: cmake(Qt5Gui)
+#BuildRequires: cmake(Qt5Core)
 BuildRequires: meson
 BuildRequires: glibc-static-devel
 
@@ -37,16 +37,13 @@ which are easy to play with the aid of a mouse. The rules for the games
 have been coded for your pleasure in the GNOME scripting language (Scheme).
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 
 %meson \
        -D theme_pysol=true \
        -D theme_pysol_path=%{_datadir}/PySolFC \
-       -D theme_kde=true \
-       -D theme_kde_path=%{_datadir}/carddecks \
        -D theme_svg_qtsvg=true \
        -D theme_svg_rsvg=true
        
